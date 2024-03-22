@@ -2,6 +2,7 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Card";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const FetchCittà = function (props) {
   const [details, setDetails] = useState({});
@@ -39,7 +40,9 @@ const FetchCittà = function (props) {
             <Card.Text>Clouds: {details.clouds.all} %</Card.Text>
             <Card.Text>Humidity: {details.main.humidity} %</Card.Text>
             <Card.Text>Temperature: {details.main.temp} °F</Card.Text>
-            <Button className="bg-info">More info</Button>
+            <Link to={"/meteo-details-details/" + details.name}>
+              <Button className="bg-info">More info</Button>
+            </Link>
           </Card.Body>
         </Card>
       )}

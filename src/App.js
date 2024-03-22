@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Details from "./components/Details";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/meteo-details/" element={<Details/>} /> */}
+          <Route path="/meteo-details/" element={<Details />} />
         </Routes>
 
         <Footer />
