@@ -1,21 +1,21 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Card";
+
+import FetchCittà from "./FetchCittà";
 
 const HomePage = function () {
   return (
     <Container className="my-4">
       <Row className="justify-content-center">
-        <Col xs={12} md={8}>
-          <Card className="text-center text-white">
-            <Card.Body className="bg-img">
-              <Card.Title>Nome della città</Card.Title>
-              <Card.Text>Scopri che tempo fa..</Card.Text>
-              <Button className="bg-info">More info</Button>
-            </Card.Body>
-          </Card>
+        <Col xs={12} md={8} className="my-3 ">
+          <FetchCittà città={"milano"} img={"bg-img1"} />
+        </Col>
+        <Col xs={12} md={8} className="my-3">
+          <FetchCittà città={"roma"} img={"bg-img2"} />
+        </Col>
+        <Col xs={12} md={8} className="my-3">
+          <FetchCittà città={"sicilia"} img={"bg-img3"} />
         </Col>
       </Row>
     </Container>
