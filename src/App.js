@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import Details from "./components/Details";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/meteo-details/" element={<Details />} />
+          <Route path="/meteo-details/:meteoName" element={<Details />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />
